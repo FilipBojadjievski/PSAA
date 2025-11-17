@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class Node<E> {
     protected E data;
     protected Node<E> next;
@@ -108,9 +110,42 @@ class SLinkedList<E> {
 
 public class Zad1Jan {
     public static void main(String[] args) {
-        
+        Scanner in=new Scanner(System.in);
+        Integer n=in.nextInt();
+        SLinkedList<Integer> slist=new SLinkedList<Integer>();
+        for (int i=0;i<n;i++){
+            slist.insertLast(in.nextInt());
+        }
+        swap(slist);
+        slist.printList();
     }
-    public static E void swap(SLinkedList <E> lista){
+    public static <E> void swap(SLinkedList <E> lista){
+        if (lista.getHead()==null){
+            return;
+        }
+        Node <E> head=lista.getHead();
+       
+        Node <E> prev=null;
+        while (head.next!=null){
+            Node <E> next=head.next;
+            Node <E> temp=next.next;
+            head.next=temp;
+            next.next=head;
+            if (head==lista.getHead()){
+                lista.setHead(next);
+            }
+            if (prev==null){
+                prev=head;
+            }
+            else {
+                prev.next=next;
+            }
+            if (head.next !=null){
+                head=head.next;
+                next=head.next;
+            }
+
+        }
         
     }
 }
