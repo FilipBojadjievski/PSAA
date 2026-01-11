@@ -1,5 +1,7 @@
 import java.util.Scanner;
 import java.util.Stack;
+import java.util.LinkedList;
+import java.util.Queue;
 class Node<E> {
     protected E data;
     protected Node<E> next;
@@ -145,6 +147,7 @@ public class Zad1 {
     Scanner in=new Scanner(System.in);
     Integer n=in.nextInt();
     Integer ns=in.nextInt();
+    Queue <Integer> a=new LinkedList<Integer>();
     for (int i=0;i<n;i++){
         s.insertLast(in.nextInt());
     }

@@ -108,8 +108,9 @@ class SLinkedList<E> {
     }
 }
 
-public class Zad1juli {
+public class Zad1Juli {
     public static void main(String[] args) {
+        System.out.println('1'+1+1);
                 Scanner in=new Scanner(System.in);
         Integer n=in.nextInt();
         SLinkedList<Integer> slist=new SLinkedList<Integer>();
